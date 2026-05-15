@@ -75,7 +75,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: peterpeterparker/blog-to-newsletter-action@main
+      - uses: peterpeterparker/blog-to-newsletter-action@9f30f42b8c5f82087a3b36a360c37d9f489b4c8c # v0.0.1
         with:
           blog_posts_path: "src/blog"
           blog_base_url: "https://website.com"
