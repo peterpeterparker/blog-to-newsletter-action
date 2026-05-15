@@ -53,7 +53,7 @@ inputs:
 runs:
   using: "docker"
   # For release
-  image: "docker://peterpeterparker/blog-to-newsletter-action:latest"
+  image: "docker://peterpeterparker/blog-to-newsletter-action:0.0.1"
   # Uncomment for development purpose
   # image: "Dockerfile"
   env:
