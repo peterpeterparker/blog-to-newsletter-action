@@ -1,0 +1,74 @@
+name: "Blog to Newsletter"
+description: "Automatically generate and send a newsletter - after approval - for a blog post using AI."
+author: "peterpeterparker"
+
+branding:
+  icon: "mail"
+  color: "purple"
+
+inputs:
+  blog_posts_path:
+    description: "Glob pattern to match blog post files (e.g. src/routes/blog/**/*.md)"
+    required: true
+  blog_base_url:
+    description: "Base URL of your blog (e.g. https://daviddalbusco.com)"
+    required: true
+  blog_author:
+    description: "Author name used to write the newsletter in first person"
+    required: true
+  blog_audience:
+    description: "Target audience for the newsletter (e.g. developer, designer, entrepreneur)"
+    default: "developer"
+  github_token:
+    description: "Optional GitHub token used to fetch commit information from the GitHub API"
+  mailchimp_api_key:
+    description: "Mailchimp API key"
+    required: true
+  mailchimp_list_id:
+    description: "Mailchimp audience/list ID"
+    required: true
+  mailchimp_from_name:
+    description: "Sender name for the newsletter. Defaults to blog_author if not set."
+  mailchimp_reply_to:
+    description: "Reply-to email address for the newsletter"
+    required: true
+  mailchimp_test_emails:
+    description: "Comma-separated list of email addresses to send a test email to. If set, a 'Send Test Email' button will be added to the approval message."
+  anthropic_api_key:
+    description: "Anthropic API key"
+    required: true
+  anthropic_model:
+    description: "Claude model to use for newsletter generation"
+    default: "claude-sonnet-4-6"
+  anthropic_max_tokens:
+    description: "Maximum number of tokens for the AI-generated newsletter. Higher values allow longer content but cost more."
+    default: "10000"
+  telegram_bot_token:
+    description: "Telegram bot token from @BotFather"
+    required: true
+  telegram_chat_id:
+    description: "Your Telegram chat ID"
+    required: true
+
+runs:
+  using: "docker"
+  # For release
+  image: "docker://peterpeterparker/blog-to-newsletter-action:latest"
+  # Uncomment for development purpose
+  # image: "Dockerfile"
+  env:
+    BLOG_POSTS_PATH: ${{ inputs.blog_posts_path }}
+    BLOG_BASE_URL: ${{ inputs.blog_base_url }}
+    BLOG_AUTHOR: ${{ inputs.blog_author }}
+    BLOG_AUDIENCE: ${{ inputs.blog_audience }}
+    GITHUB_TOKEN: ${{ inputs.github_token }}
+    MAILCHIMP_API_KEY: ${{ inputs.mailchimp_api_key }}
+    MAILCHIMP_LIST_ID: ${{ inputs.mailchimp_list_id }}
+    MAILCHIMP_FROM_NAME: ${{ inputs.mailchimp_from_name }}
+    MAILCHIMP_REPLY_TO: ${{ inputs.mailchimp_reply_to }}
+    MAILCHIMP_TEST_EMAILS: ${{ inputs.mailchimp_test_emails }}
+    ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
+    ANTHROPIC_MODEL: ${{ inputs.anthropic_model }}
+    ANTHROPIC_MAX_TOKENS: ${{ inputs.anthropic_max_tokens }}
+    TELEGRAM_BOT_TOKEN: ${{ inputs.telegram_bot_token }}
+    TELEGRAM_CHAT_ID: ${{ inputs.telegram_chat_id }}
