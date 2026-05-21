@@ -1,11 +1,15 @@
 # blog-to-newsletter-action
 
-Automatically generate and send a newsletter — after approval — for a blog post using AI.
-
-When you merge a pull request that adds a new blog post, this GitHub Action kicks in: it reads the post, generates a polished newsletter draft using an AI third party (Claude), creates it in your email automation (Mailchimp), and sends you a message (Telegram) to review and approve before anything goes out.
+When you merge a pull request that adds a post to your blog, this GitHub Action kicks in: it reads the post, generates a polished newsletter draft using an AI third party (Claude), creates it in your email automation (Mailchimp), and sends you a message (Telegram) to review and approve before anything goes out.
 
 > [!NOTE]
 > This action currently supports Mailchimp for newsletters, Claude for content generation, and Telegram for approval. All three are designed to be swappable — the architecture is provider-based and can be extended to support other services.
+
+<p align="center">
+  <a href="https://github.com/peterpeterparker/blog-to-newsletter-action"><img alt="Checks" src="https://img.shields.io/github/actions/workflow/status/peterpeterparker/blog-to-newsletter-action/checks.yml?label=checks&style=flat-square"></a>
+  <a href="https://github.com/peterpeterparker/blog-to-newsletter-action"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/peterpeterparker/blog-to-newsletter-action/tests.yml?label=tests&style=flat-square"></a>
+  <a href="https://github.com/peterpeterparker/blog-to-newsletter-action/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/peterpeterparker/blog-to-newsletter-action?style=flat-square"></a>
+</p>
 
 ## How it works
 
