@@ -25,7 +25,7 @@ PR merged on GitHub
   → You tap Approve → newsletter sent to your subscribers ✓
 ```
 
-The approval step is handled by a separate Cloudflare Worker: [blog-to-newsletter-worker](https://github.com/peterpeterparker/blog-to-newsletter-worker). You'll need to deploy it too.
+The approval step is handled by a separate worker: [blog-to-newsletter-worker](https://github.com/peterpeterparker/blog-to-newsletter-worker). You'll need to deploy it too.
 
 ## Requirements
 
@@ -34,7 +34,7 @@ Before setting up this action you'll need:
 - A [Mailchimp](https://mailchimp.com) account with an audience
 - An [Anthropic](https://console.anthropic.com) API key
 - A Telegram bot (see setup below)
-- The [blog-to-newsletter-worker](https://github.com/peterpeterparker/blog-to-newsletter-worker) deployed to Cloudflare
+- The [blog-to-newsletter-worker](https://github.com/peterpeterparker/blog-to-newsletter-worker) deployed
 
 ## Setup
 
@@ -53,9 +53,9 @@ The action relies on external services, here's a summary of how to get each one 
 3. Start a conversation with your new bot
 4. Message [@userinfobot](https://t.me/userinfobot) to get your **chat ID**
 
-### Cloudflare Worker
+### Worker
 
-Fork and deploy [blog-to-newsletter-worker](https://github.com/peterpeterparker/blog-to-newsletter-worker) to your Cloudflare account. Follow its README to set secrets and register the Telegram webhook.
+Fork and deploy [blog-to-newsletter-worker](https://github.com/peterpeterparker/blog-to-newsletter-worker). Follow its README to set secrets and register the Telegram webhook.
 
 ## Usage
 
