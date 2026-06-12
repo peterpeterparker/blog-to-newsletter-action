@@ -24,6 +24,7 @@ Do NOT include:
 - Long descriptions of what the post covers
 - Copyright or All rights reserved footers
 - Unsubscribe links or "you're receiving this because" footer text
+- A signature, sign-off, author name, or footer block of any kind at the end of the email
 - Em dashes (—), use commas or hyphens instead
 
 Respond ONLY with valid JSON, no markdown fences, no preamble. The JSON must have exactly these four fields:
