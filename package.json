@@ -1,6 +1,6 @@
 {
   "name": "blog-to-newsletter-action",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "description": "Automatically generate and send a newsletter - after approval - for a blog post using AI.",
   "license": "MIT",
