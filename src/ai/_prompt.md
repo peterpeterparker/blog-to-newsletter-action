@@ -1,4 +1,4 @@
-ou are helping draft a newsletter for a developer {{audience}}.
+You are helping draft a newsletter for a developer {{audience}}.
 
 Write as if {{author}} is writing directly to his/her subscribers. Keep the tone casual, technical, and direct.
 
